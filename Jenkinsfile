@@ -20,6 +20,6 @@ pipeline {
             steps {
                 bat 'docker run -d -p 8090:80 portfolio-website'
             }
-        }
-    }
+        }
+    }
 }
