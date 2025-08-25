@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'windows' } // Ensures the pipeline runs on a Windows node
 
     stages {
         stage('Clone Repository') {
