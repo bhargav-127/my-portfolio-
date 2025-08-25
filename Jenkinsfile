@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Verify Docker Installation') {
-            steps {
-               // script {
-                    sh 'docker --version'  // Ensure Docker is available
-                    sh 'docker ps'  // List running containers
-                //}
-            }
-        }
+        // stage('Verify Docker Installation') {
+        //     steps {
+        //        // script {
+        //             sh 'docker --version'  // Ensure Docker is available
+        //             sh 'docker ps'  // List running containers
+        //         //}
+        //     }
+        // }
 
         stage('Clone Repository') {
             steps {
