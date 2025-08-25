@@ -10,9 +10,8 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                script {
-                    docker.build('portfolio-website')
-                }
+                // Use shell command directly
+                bat 'docker build -t portfolio-website .' // use 'sh' if Linux
             }
         }
 
