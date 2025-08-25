@@ -4,10 +4,10 @@ pipeline {
     stages {
         stage('Verify Docker Installation') {
             steps {
-                script {
+               // script {
                     sh 'docker --version'  // Ensure Docker is available
                     sh 'docker ps'  // List running containers
-                }
+                //}
             }
         }
 
