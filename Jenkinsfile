@@ -16,13 +16,13 @@ pipeline {
 
         stage('Stop Previous Container') {
             steps {
-                // Stop and remove any container using port 8091, ignore errors if none found
-                bat '''
-                for /f "tokens=1" %%i in ('docker ps -q --filter "publish=8091"') do docker stop %%i || exit 0
-                for /f "tokens=1" %%i in ('docker ps -a -q --filter "publish=8091"') do docker rm %%i || exit 0
-                '''
-            }
+            bat '''
+            for /f "tokens=1" %%i in ('docker ps -q --filter "publish=8091"') do docker stop %%i
+            for /f "tokens=1" %%i in ('docker ps -a -q --filter "publish=8091"') do docker rm %%i
+            exit 0
+            '''
         }
+    }
 
         stage('Run Container') {
             steps {
