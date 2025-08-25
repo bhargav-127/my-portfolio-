@@ -10,14 +10,25 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                // Use shell command directly
-                bat 'docker build -t portfolio-website .' // use 'sh' if Linux
+                script {
+                    if (isUnix()) {
+                        sh 'docker build -t portfolio-website .'  // Use 'sh' for Linux/Mac
+                    } else {
+                        bat 'docker build -t portfolio-website .'  // Use 'bat' for Windows
+                    }
+                }
             }
         }
 
         stage('Run Container') {
             steps {
-                bat 'docker run -d -p 8090:80 portfolio-website'
+                script {
+                    if (isUnix()) {
+                        sh 'docker run -d -p 8090:80 portfolio-website'  // Use 'sh' for Linux/Mac
+                    } else {
+                        bat 'docker run -d -p 8090:80 portfolio-website'  // Use 'bat' for Windows
+                    }
+                }
             }
         }
     }
