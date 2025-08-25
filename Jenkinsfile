@@ -14,6 +14,16 @@ pipeline {
             }
         }
 
+        stage('Stop Previous Container') {
+            steps {
+                // Stop and remove any container using port 8091
+                bat '''
+                for /f "tokens=1" %%i in ('docker ps -q --filter "publish=8091"') do docker stop %%i
+                for /f "tokens=1" %%i in ('docker ps -a -q --filter "publish=8091"') do docker rm %%i
+                '''
+            }
+        }
+
         stage('Run Container') {
             steps {
                 bat 'docker run -d -p 8091:80 portfolio-website'
