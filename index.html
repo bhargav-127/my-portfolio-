@@ -1,1 +1,187 @@
-<h1> my portfolio  </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhargav Arda - Student Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold text-orange-600">Bhargav Arda</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-orange-500 font-medium">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-orange-500 font-medium">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-orange-500 font-medium">Projects</a>
+                <a href="#hobbies" class="text-gray-600 hover:text-orange-500 font-medium">Hobbies</a>
+                <a href="#contact" class="text-gray-600 hover:text-orange-500 font-medium">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600 hover:text-orange-500 focus:outline-none">
+                    <svg id="menu-icon" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                    <svg id="x-icon" class="w-7 h-7 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="mobile-nav-hidden md:hidden bg-white shadow-md py-4 text-center">
+            <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
+            <a href="#skills" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Skills</a>
+            <a href="#projects" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Projects</a>
+            <a href="#hobbies" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Hobbies</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <img class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://placehold.co/300x300/FDBA74/ffffff?text=Bhargav" alt="Bhargav Arda profile picture">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-orange-600 mb-2">Bhargav Arda</h1>
+            <h2 class="text-xl md:text-2xl text-gray-500 mb-8">BCA Honors - Specializing in Cloud Computing</h2>
+            <p class="max-w-3xl mx-auto text-gray-600 leading-relaxed">
+                As a BCA Honors student focused on Cloud Computing, I am dedicated to building and testing innovative solutions. My journey has been defined by a passion for creating engaging and functional applications. Beyond my academic pursuits, I have been an active participant in dance and have managed multiple college events, honing my organizational and leadership skills. I believe in a holistic approach to learning, which extends beyond the classroom.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-extrabold text-orange-600 mb-2 section-header inline-block">My Skills</h2>
+            <p class="text-xl text-gray-500 my-8">A diverse skill set in development, content, and more.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-lg font-semibold text-gray-800">Cloud Computing</h3>
+                    <p class="text-sm text-gray-500">My main academic focus and area of specialization.</p>
+                </div>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-lg font-semibold text-gray-800">Programming Languages</h3>
+                    <p class="text-sm text-gray-500">Strong foundation in Java, Python, C, C++, and web technologies like HTML and PHP.</p>
+                </div>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-lg font-semibold text-gray-800">Database Management</h3>
+                    <p class="text-sm text-gray-500">Experience working with various DBMS systems to manage and organize data effectively.</p>
+                </div>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-lg font-semibold text-gray-800">Software Testing & QA</h3>
+                    <p class="text-sm text-gray-500">Proficiency in creating test plans and executing comprehensive tests to ensure software quality.</p>
+                </div>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-lg font-semibold text-gray-800">AI & Interactive Systems</h3>
+                    <p class="text-sm text-gray-500">Experience in developing and implementing interactive AI applications for a better user experience.</p>
+                </div>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-lg font-semibold text-gray-800">Content Creation</h3>
+                    <p class="text-sm text-gray-500">Skilled in creating engaging written content and public speaking.</p>
+                </div>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-lg font-semibold text-gray-800">Event Management</h3>
+                    <p class="text-sm text-gray-500">Proven ability to organize and manage college events from start to finish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-orange-600 mb-2 text-center section-header inline-block">My Projects</h2>
+            <p class="text-xl text-gray-500 my-8 text-center">Showcasing my work in development and AI.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-[1.02]">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Core Java Application</h3>
+                    <p class="text-gray-600 mb-4">A foundational project developed in Java. This project demonstrates my understanding of core programming principles and object-oriented design, from abstract classes to multithreading.</p>
+                    <button class="project-btn text-orange-600 font-semibold hover:underline" data-project-id="1">Learn More →</button>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-[1.02]">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Creative Food Website</h3>
+                    <p class="text-gray-600 mb-4">I created an attractive and functional website for a food business, focusing on a clean design, user experience, and appealing visuals. The site includes dynamic menu sections and a contact form.</p>
+                    <button class="project-btn text-orange-600 font-semibold hover:underline" data-project-id="2">Learn More →</button>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-[1.02]">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Interactive AI with PHP & Python</h3>
+                    <p class="text-gray-600 mb-4">This project combines backend logic with intelligent systems. I used PHP for the server-side scripting and Python for the AI model to create an interactive AI that responds to user input, showcasing my skills in multiple languages and system integration.</p>
+                    <button class="project-btn text-orange-600 font-semibold hover:underline" data-project-id="3">Learn More →</button>
+                </div>
+                <!-- Project 4 -->
+                <div class="bg-white rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-[1.02]">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Software Testing & QA</h3>
+                    <p class="text-gray-600 mb-4">I built a test-ready website and performed extensive, multi-faceted testing to identify and document bugs. This project highlights my dedication to quality assurance and detail-oriented work through a systematic approach to testing methodologies.</p>
+                    <button class="project-btn text-orange-600 font-semibold hover:underline" data-project-id="4">Learn More →</button>
+                </div>
+                <!-- Project 5 -->
+                <div class="bg-white rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-[1.02]">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">AI-Powered Android App</h3>
+                    <p class="text-gray-600 mb-4">This mobile application integrates an AI component to provide a smart and interactive user experience. This shows my ability to develop for mobile platforms and leverage modern AI technologies, from concept to deployment.</p>
+                    <button class="project-btn text-orange-600 font-semibold hover:underline" data-project-id="5">Learn More →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies & Interests Section -->
+    <section id="hobbies" class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-extrabold text-orange-600 mb-2 section-header inline-block">Hobbies & Interests</h2>
+            <p class="text-xl text-gray-500 my-8">A look at my creative and social side.</p>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Dance</h3>
+                    <p class="text-gray-600">I am a passionate participant in dance, which allows me to express creativity and stay disciplined. It's a key part of my life outside of academics.</p>
+                </div>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Social Media & Events</h3>
+                    <p class="text-gray-600">I am very active on social media, with a reach of over **3 million views**. This has given me practical experience in content creation and audience engagement. I also manage a variety of college events, showcasing my organizational skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-extrabold text-orange-600 mb-2 section-header inline-block">Get in Touch</h2>
+            <p class="text-xl text-gray-500 my-8">I'm always open to new opportunities and collaborations!</p>
+            <div class="flex flex-col items-center gap-4">
+                <a href="mailto:bhargav.arda01@gmail.com" class="text-gray-600 hover:text-orange-500 font-medium text-lg">
+                    <span class="flex items-center">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+                        bhargav.arda01@gmail.com
+                    </span>
+                </a>
+                <!-- Add more links here, e.g., LinkedIn, GitHub, etc. -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Bhargav Arda. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Modal Structure -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-title" class="text-3xl font-bold text-gray-800 mb-4"></h3>
+            <p id="modal-description" class="text-gray-600"></p>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
